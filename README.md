@@ -63,7 +63,7 @@ Google Gemini
 Final Response
       ↓
 React Frontend
-
+```
 Key Concept
 
 FAISS handles retrieval, while Gemini handles generation.
