@@ -20,7 +20,13 @@ response.
 The chatbot is restricted to the healthcare domain and includes security
 mechanisms to handle out-of-domain questions, prompt injection attempts, and
 emergency-related requests.
+---
 
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![AmanAI Home Page](screenshots/home.png)
 ---
 
 ## ✨ Features
