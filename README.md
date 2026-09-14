@@ -180,7 +180,7 @@ Process uploaded data
 Rebuild the FAISS vector store
 Update the chatbot knowledge base
 Dataset Processing
-CSV Dataset
+```CSV Dataset
     ↓
 Data Processing
     ↓
@@ -191,7 +191,7 @@ Embeddings
 FAISS Index
     ↓
 Updated Knowledge Base
-
+```
 🛠️ Tech Stack
 Frontend
 React
@@ -218,7 +218,7 @@ bcrypt
 JWT
 python-jose
 📁 Project Structure
-amanai-healthcare-rag-chatbot/
+```amanai-healthcare-rag-chatbot/
 │
 ├── backend/
 │   ├── auth.py
@@ -250,6 +250,7 @@ amanai-healthcare-rag-chatbot/
 │
 ├── .gitignore
 └── README.md
+```
 🧪 Testing
 
 The application was tested across the main functional and security flows.
