@@ -257,39 +257,40 @@ The application was tested across the main functional and security flows.
 
 Testing included:
 
-User Sign Up
-User Sign In
-English healthcare RAG
-Arabic healthcare RAG
-Intent detection
-Out-of-domain requests
-Prompt injection attempts
-Emergency requests
-Conversation history
-New conversations
-Conversation deletion
-Admin authentication
-User access restrictions
-Admin dataset upload
-Backend authorization
-Multi-tab authentication
-RTL / LTR interface behavior
+*User Sign Up
+*User Sign In
+*English healthcare RAG
+*Arabic healthcare RAG
+*Intent detection
+*Out-of-domain requests
+*Prompt injection attempts
+*Emergency requests
+*Conversation history
+*New conversations
+*Conversation deletion
+*Admin authentication
+*User access restrictions
+*Admin dataset upload
+*Backend authorization
+*Multi-tab authentication
+*RTL / LTR interface behavior
+
 🚀 Future Improvements
-Automated testing with Pytest
-API testing
-Improved source citations
-More healthcare datasets
-Retrieval evaluation
-Conversation summarization
-Cloud deployment
-Monitoring and analytics
+
+*Automated testing with Pytest
+*API testing
+*Improved source citations
+*More healthcare datasets
+*Retrieval evaluation
+*Conversation summarization
+*Cloud deployment
+*Monitoring and analytics
+
 ⚠️ Medical Disclaimer
 
-AmanAI is an educational software project and is not a replacement for
-professional medical advice, diagnosis, or treatment.
+AmanAI is an educational software project and is not a replacement for professional medical advice, diagnosis, or treatment.
 
-Users should consult qualified healthcare professionals for medical decisions,
-especially in emergency situations.
+Users should consult qualified healthcare professionals for medical decisions, especially in emergency situations.
 
 👩‍💻 Author
 
