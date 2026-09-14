@@ -1,0 +1,2202 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap");
+/* =====================================================
+   AMANAI ADMIN PAGE
+===================================================== */
+
+.admin-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(220, 198, 242, 0.32),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(248, 198, 217, 0.25),
+      transparent 30%
+    ),
+    #fff9fb;
+
+  color: #28213a;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.admin-navbar {
+  width: 100%;
+  height: 76px;
+
+  padding: 0 5%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /*
+    Keep AmanAI on the right
+    and navigation buttons on the left.
+  */
+  direction: rtl;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid #eee5f1;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 20;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  direction: rtl;
+
+  user-select: none;
+}
+
+
+.admin-brand-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7b61c8,
+      #e79bb7
+    );
+
+  box-shadow:
+    0 8px 22px rgba(123, 97, 200, 0.22);
+}
+
+
+.admin-brand h2 {
+  margin: 0;
+
+  color: #4b2e83;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.4px;
+}
+
+
+.admin-brand span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #766f82;
+
+  font-size: 11px;
+
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   NAVIGATION ACTIONS
+===================================================== */
+
+.admin-nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 12px;
+
+  /*
+    Space between the buttons and AmanAI logo.
+  */
+  margin-left: 40px;
+
+  flex-shrink: 0;
+
+  direction: ltr;
+}
+
+
+/* =====================================================
+   COMMON NAV BUTTON
+===================================================== */
+
+.admin-nav-actions button {
+  box-sizing: border-box;
+
+  height: 46px;
+
+  margin: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  outline: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* =====================================================
+   CHAT BUTTON
+===================================================== */
+
+.admin-chat-button {
+  width: 92px;
+  min-width: 92px;
+
+  padding: 0;
+
+  border: 1px solid #6b3fa0;
+
+  background: #ffffff;
+
+  color: #5b2f91;
+}
+
+
+.admin-chat-button:hover {
+  background: #f6efff;
+
+  border-color: #5b2f91;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 16px rgba(91, 47, 145, 0.08);
+}
+
+
+.admin-chat-button:active {
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   LANGUAGE BUTTON
+===================================================== */
+
+.admin-language-button {
+  width: 78px;
+  min-width: 78px;
+
+  padding: 0;
+
+  gap: 6px;
+
+  border: 1px solid #ddd0ed;
+
+  background: #ffffff;
+
+  color: #5b2f91;
+}
+
+
+.admin-language-button svg {
+  width: 17px;
+  height: 17px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-language-button span {
+  white-space: nowrap;
+}
+
+
+.admin-language-button:hover {
+  background: #f6efff;
+
+  border-color: #cdb6e3;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 16px rgba(91, 47, 145, 0.06);
+}
+
+
+.admin-language-button:active {
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   THEME BUTTON
+===================================================== */
+
+.admin-theme-button {
+  width: 46px;
+  min-width: 46px;
+
+  padding: 0;
+
+  border: 1px solid #ddd0ed;
+
+  background: #ffffff;
+
+  color: #5b2f91;
+}
+
+
+.admin-theme-button svg {
+  width: 19px;
+  height: 19px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-theme-button:hover {
+  background: #f6efff;
+
+  border-color: #cdb6e3;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 16px rgba(91, 47, 145, 0.06);
+}
+
+
+.admin-theme-button:active {
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   LOGOUT BUTTON
+===================================================== */
+
+.admin-logout {
+  width: 112px;
+  min-width: 112px;
+
+  padding: 0;
+
+  gap: 8px;
+
+  border: none;
+
+  background: #553092;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(75, 46, 131, 0.16);
+}
+
+
+.admin-logout svg {
+  width: 17px;
+  height: 17px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-logout:hover {
+  background: #47267d;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 10px 24px rgba(75, 46, 131, 0.22);
+}
+
+
+.admin-logout:active {
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.admin-main {
+  min-height: calc(100vh - 76px);
+
+  padding: 55px 20px;
+
+  box-sizing: border-box;
+}
+
+
+.admin-container {
+  width: min(1050px, 100%);
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.admin-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 35px;
+}
+
+
+.admin-heading-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  color: #4b2e83;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eee3f8,
+      #fbdce8
+    );
+
+  border: 1px solid #e7d8ef;
+}
+
+
+.admin-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 6px;
+
+  color: #8b6ab9;
+
+  font-size: 11px;
+
+  font-weight: 750;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+.admin-heading h1 {
+  margin: 0;
+
+  color: #4b2e83;
+
+  font-size: 31px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.8px;
+}
+
+
+.admin-heading p {
+  margin: 7px 0 0;
+
+  color: #766f82;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   STAT CARDS
+===================================================== */
+
+.admin-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 30px;
+}
+
+
+.admin-stat-card {
+  min-height: 100px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid #eee5f1;
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 10px 30px rgba(75, 46, 131, 0.055);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.admin-stat-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 35px rgba(75, 46, 131, 0.08);
+}
+
+
+.admin-stat-icon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: #6c4ba2;
+
+  background: #f2eafa;
+}
+
+
+.admin-stat-card span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #8d8497;
+
+  font-size: 11px;
+
+  font-weight: 550;
+}
+
+
+.admin-stat-card strong {
+  color: #4b2e83;
+
+  font-size: 14px;
+
+  font-weight: 750;
+}
+
+
+/* =====================================================
+   MANAGEMENT SECTION
+===================================================== */
+
+.admin-management {
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid #eee5f1;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 18px 50px rgba(75, 46, 131, 0.07);
+
+  box-sizing: border-box;
+}
+
+
+.management-header h2 {
+  margin: 0;
+
+  color: #28213a;
+
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+
+.management-header p {
+  margin: 7px 0 0;
+
+  color: #766f82;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   UPLOAD CARD
+===================================================== */
+
+.admin-upload-card {
+  margin-top: 25px;
+
+  padding: 22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #eadff0;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fcf9fe,
+      #fff9fb
+    );
+}
+
+
+.admin-upload-icon {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  color: #6a4aa0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eee3f8,
+      #fbdce8
+    );
+}
+
+
+.admin-upload-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.admin-upload-content h3 {
+  margin: 0;
+
+  color: #4b2e83;
+
+  font-size: 15px;
+
+  font-weight: 750;
+}
+
+
+.admin-upload-content p {
+  margin: 5px 0 0;
+
+  color: #8d8497;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   UPLOAD BUTTON
+===================================================== */
+
+.admin-upload-button {
+  height: 45px;
+
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4b2e83,
+      #7b61c8
+    );
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(75, 46, 131, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.admin-upload-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(75, 46, 131, 0.23);
+}
+
+
+.admin-upload-button:active {
+  transform: translateY(0);
+}
+
+
+
+
+/* =====================================================
+   DATASET FILE ACTIONS
+===================================================== */
+
+.admin-file-input {
+  display: none;
+}
+
+.admin-upload-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+
+.admin-file-button {
+  height: 45px;
+  padding: 0 15px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border: 1px solid #d9c8e5;
+  border-radius: 11px;
+
+  background: #ffffff;
+  color: #5b2f91;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-file-button:hover {
+  background: #f7f0fb;
+  border-color: #c8addb;
+  transform: translateY(-1px);
+}
+
+.admin-file-button:disabled,
+.admin-upload-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.admin-selected-file {
+  margin-top: 9px;
+
+  max-width: 100%;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 6px 9px;
+
+  border-radius: 9px;
+
+  background: #f4eef9;
+  color: #68449a;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.admin-selected-file span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
+}
+
+.admin-upload-message {
+  margin-top: 12px;
+
+  padding: 11px 14px;
+
+  border-radius: 11px;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  text-align: center;
+
+  border: 1px solid transparent;
+}
+
+.admin-upload-message.success {
+  color: #356747;
+  background: #eff9f2;
+  border-color: #cce9d3;
+}
+
+.admin-upload-message.error {
+  color: #a33b4c;
+  background: #fff2f4;
+  border-color: #f1c8cf;
+}
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+.admin-dark {
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(103, 73, 132, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(143, 74, 108, 0.14),
+      transparent 30%
+    ),
+    #14101b;
+
+  color: #eee7f5;
+}
+
+
+/* =====================================================
+   DARK NAVBAR
+===================================================== */
+
+.admin-dark .admin-navbar {
+  background: rgba(20, 16, 27, 0.94);
+
+  border-bottom-color: #33283d;
+}
+
+
+.admin-dark .admin-brand h2 {
+  color: #d8b9ef;
+}
+
+
+.admin-dark .admin-brand span {
+  color: #a99caf;
+}
+
+
+/* =====================================================
+   DARK CHAT
+===================================================== */
+
+.admin-dark .admin-chat-button {
+  background: #1d1725;
+
+  border-color: #8e63b8;
+
+  color: #d8b9ef;
+}
+
+
+.admin-dark .admin-chat-button:hover {
+  background: #292033;
+
+  border-color: #a77acb;
+}
+
+
+/* =====================================================
+   DARK LANGUAGE
+===================================================== */
+
+.admin-dark .admin-language-button {
+  background: #1d1725;
+
+  border-color: #40334c;
+
+  color: #e5d9ee;
+}
+
+
+.admin-dark .admin-language-button:hover {
+  background: #292033;
+
+  border-color: #59466a;
+}
+
+
+/* =====================================================
+   DARK THEME
+===================================================== */
+
+.admin-dark .admin-theme-button {
+  background: #1d1725;
+
+  border-color: #40334c;
+
+  color: #e5d9ee;
+}
+
+
+.admin-dark .admin-theme-button:hover {
+  background: #292033;
+
+  border-color: #59466a;
+}
+
+
+/* =====================================================
+   DARK LOGOUT
+===================================================== */
+
+.admin-dark .admin-logout {
+  background: #553092;
+
+  color: #ffffff;
+}
+
+
+.admin-dark .admin-logout:hover {
+  background: #6540a5;
+}
+
+
+/* =====================================================
+   DARK HEADING
+===================================================== */
+
+.admin-dark .admin-heading-icon {
+  color: #d5b8ed;
+
+  background:
+    linear-gradient(
+      135deg,
+      #30243b,
+      #3b2633
+    );
+
+  border-color: #4a3855;
+}
+
+
+.admin-dark .admin-eyebrow {
+  color: #ae8bd1;
+}
+
+
+.admin-dark .admin-heading h1 {
+  color: #d8b9ef;
+}
+
+
+.admin-dark .admin-heading p {
+  color: #aaa0b1;
+}
+
+
+/* =====================================================
+   DARK STAT CARDS
+===================================================== */
+
+.admin-dark .admin-stat-card {
+  background: rgba(29, 23, 37, 0.92);
+
+  border-color: #33283d;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+.admin-dark .admin-stat-card:hover {
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.24);
+}
+
+
+.admin-dark .admin-stat-icon {
+  color: #b494d5;
+
+  background: #2b2135;
+}
+
+
+.admin-dark .admin-stat-card span {
+  color: #9d91a5;
+}
+
+
+.admin-dark .admin-stat-card strong {
+  color: #d5b8ed;
+}
+
+
+/* =====================================================
+   DARK MANAGEMENT
+===================================================== */
+
+.admin-dark .admin-management {
+  background: rgba(29, 23, 37, 0.94);
+
+  border-color: #33283d;
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+.admin-dark .management-header h2 {
+  color: #eee7f5;
+}
+
+
+.admin-dark .management-header p {
+  color: #aaa0b1;
+}
+
+
+/* =====================================================
+   DARK UPLOAD CARD
+===================================================== */
+
+.admin-dark .admin-upload-card {
+  border-color: #3b3045;
+
+  background:
+    linear-gradient(
+      135deg,
+      #211a29,
+      #241b26
+    );
+}
+
+
+.admin-dark .admin-upload-icon {
+  color: #b494d5;
+
+  background:
+    linear-gradient(
+      135deg,
+      #30243b,
+      #3b2633
+    );
+}
+
+
+.admin-dark .admin-upload-content h3 {
+  color: #d5b8ed;
+}
+
+
+.admin-dark .admin-upload-content p {
+  color: #9d91a5;
+}
+
+.admin-dark .admin-file-button {
+  background: #1d1725;
+  border-color: #40334c;
+  color: #d8b9ef;
+}
+
+.admin-dark .admin-file-button:hover {
+  background: #292033;
+  border-color: #59466a;
+}
+
+.admin-dark .admin-selected-file {
+  background: #30243b;
+  color: #d5b8ed;
+}
+
+.admin-dark .admin-upload-message.success {
+  color: #a9d6b4;
+  background: #1d2b22;
+  border-color: #35533f;
+}
+
+.admin-dark .admin-upload-message.error {
+  color: #f0aeb7;
+  background: #321d24;
+  border-color: #5a313b;
+}
+
+
+/* =====================================================
+   ARABIC
+===================================================== */
+
+.admin-arabic {
+  direction: rtl;
+}
+
+
+.admin-arabic .admin-main,
+.admin-arabic .admin-container,
+.admin-arabic .admin-management,
+.admin-arabic .admin-stats {
+  direction: rtl;
+}
+
+
+/*
+  Keep the navbar physical layout stable
+  when switching languages.
+*/
+
+.admin-arabic .admin-navbar {
+  direction: rtl;
+}
+
+
+.admin-arabic .admin-nav-actions {
+  direction: ltr;
+
+  margin-left: 40px;
+  margin-right: 0;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .admin-navbar {
+    padding: 0 30px;
+  }
+
+  .admin-nav-actions {
+    gap: 10px;
+
+    margin-left: 25px;
+  }
+
+  .admin-chat-button {
+    width: 84px;
+    min-width: 84px;
+  }
+
+  .admin-language-button {
+    width: 74px;
+    min-width: 74px;
+  }
+
+  .admin-logout {
+    width: 105px;
+    min-width: 105px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 750px) {
+
+  .admin-main {
+    padding: 35px 18px;
+  }
+
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+
+  .admin-heading {
+    align-items: flex-start;
+  }
+
+
+  .admin-heading h1 {
+    font-size: 26px;
+  }
+
+
+  .admin-upload-card {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .admin-upload-content {
+    width: 100%;
+  }
+
+
+  .admin-upload-button {
+    width: 100%;
+  }
+
+  .admin-upload-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .admin-file-button {
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .admin-navbar {
+    height: 68px;
+
+    padding: 0 16px;
+  }
+
+
+  .admin-brand {
+    gap: 8px;
+  }
+
+
+  .admin-brand-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+
+  .admin-brand h2 {
+    font-size: 18px;
+  }
+
+
+  .admin-brand span {
+    display: none;
+  }
+
+
+  .admin-nav-actions {
+    gap: 7px;
+
+    margin-left: 14px;
+  }
+
+
+  .admin-chat-button {
+    width: 48px;
+    min-width: 48px;
+
+    padding: 0;
+
+    font-size: 0;
+  }
+
+
+  .admin-chat-button::after {
+    content: "Chat";
+
+    font-size: 12px;
+  }
+
+
+  .admin-language-button {
+    width: 48px;
+    min-width: 48px;
+
+    padding: 0;
+  }
+
+
+  .admin-language-button span {
+    display: none;
+  }
+
+
+  .admin-theme-button {
+    width: 44px;
+    min-width: 44px;
+  }
+
+
+  .admin-logout {
+    width: 48px;
+    min-width: 48px;
+
+    padding: 0;
+
+    gap: 0;
+
+    font-size: 0;
+  }
+
+
+  .admin-logout svg {
+    width: 17px;
+    height: 17px;
+  }
+
+
+  .admin-management {
+    padding: 22px 18px;
+
+    border-radius: 18px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 430px) {
+
+  .admin-navbar {
+    padding: 0 12px;
+  }
+
+
+  .admin-nav-actions {
+    gap: 5px;
+
+    margin-left: 8px;
+  }
+
+
+  .admin-brand {
+    gap: 6px;
+  }
+
+
+  .admin-brand-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  .admin-brand h2 {
+    font-size: 16px;
+  }
+
+
+  .admin-chat-button {
+    width: 44px;
+    min-width: 44px;
+  }
+
+
+  .admin-language-button {
+    width: 44px;
+    min-width: 44px;
+  }
+
+
+  .admin-theme-button {
+    width: 42px;
+    min-width: 42px;
+  }
+
+
+  .admin-logout {
+    width: 44px;
+    min-width: 44px;
+  }
+
+}
+/* =====================================================
+   RTL CENTERING FIX
+===================================================== */
+
+.admin-arabic .admin-main {
+  direction: rtl;
+}
+
+.admin-arabic .admin-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.admin-arabic .admin-heading {
+  justify-content: center;
+  text-align: right;
+}
+
+.admin-arabic .admin-heading > div:last-child {
+  text-align: right;
+}
+
+.admin-arabic .admin-stats {
+  direction: rtl;
+}
+
+.admin-arabic .admin-stat-card {
+  direction: rtl;
+}
+
+.admin-arabic .admin-management {
+  direction: rtl;
+}
+
+.admin-arabic .management-header {
+  text-align: center;
+}
+
+.admin-arabic .admin-upload-card {
+  direction: rtl;
+}
+
+.admin-arabic .admin-upload-content {
+  text-align: right;
+}
+/* =====================================================
+   CENTER THE ADMIN PAGE CONTENT
+===================================================== */
+
+.admin-main {
+  width: 100%;
+}
+
+.admin-container {
+  width: min(1100px, 90%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main heading */
+
+.admin-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.admin-heading > div:last-child {
+  text-align: center;
+}
+
+/* Stats cards */
+
+.admin-stats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Management section */
+
+.admin-management {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Management header */
+
+.management-header {
+  text-align: center;
+}
+
+/* Upload card */
+
+.admin-upload-card {
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =====================================================
+   ARABIC
+===================================================== */
+
+.admin-arabic .admin-heading {
+  justify-content: center;
+  text-align: center;
+}
+
+.admin-arabic .admin-heading > div:last-child {
+  text-align: center;
+}
+
+.admin-arabic .management-header {
+  text-align: center;
+}
+
+/* Keep cards centered while allowing Arabic text */
+
+.admin-arabic .admin-stat-card {
+  text-align: right;
+}
+
+.admin-arabic .admin-upload-content {
+  text-align: right;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-container {
+    width: 92%;
+  }
+
+  .admin-heading {
+    flex-direction: column;
+  }
+
+  .admin-upload-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .admin-upload-content {
+    text-align: center !important;
+  }
+}
+/* =====================================================
+   ADMIN DASHBOARD
+   FINAL SECTIONS
+===================================================== */
+
+
+/* =====================================================
+   STATS - 4 CARDS
+===================================================== */
+
+.admin-stats {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+/* =====================================================
+   DASHBOARD GRID
+===================================================== */
+
+.admin-dashboard-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+
+  margin-top: 20px;
+}
+
+
+/* =====================================================
+   ACTIVITY
+===================================================== */
+
+.admin-activity-list {
+  margin-top: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+.activity-row {
+  display: grid;
+
+  grid-template-columns:
+    105px
+    minmax(0, 1fr)
+    38px;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.activity-date {
+  color: #766f82;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+.activity-bar-container {
+  width: 100%;
+
+  height: 11px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #eee7f4;
+}
+
+
+.activity-bar {
+  height: 100%;
+
+  min-width: 5px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #7b61c8,
+      #e79bb7
+    );
+
+  transition:
+    width 0.4s ease;
+}
+
+
+.activity-count {
+  text-align: right;
+
+  color: #4b2e83;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   KNOWLEDGE BASE
+===================================================== */
+
+.knowledge-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 14px;
+
+  margin-top: 25px;
+}
+
+
+.knowledge-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 18px;
+
+  border-radius: 15px;
+
+  border: 1px solid #eadff0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fcf9fe,
+      #fff9fb
+    );
+}
+
+
+.knowledge-item svg {
+  flex-shrink: 0;
+
+  color: #6c4ba2;
+}
+
+
+.knowledge-item span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #8d8497;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+.knowledge-item strong {
+  color: #4b2e83;
+
+  font-size: 19px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   SYSTEM STATUS
+===================================================== */
+
+.system-status-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+
+.system-status-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 17px;
+
+  border-radius: 15px;
+
+  border: 1px solid #eadff0;
+
+  background: #fcf9fe;
+}
+
+
+.system-status-icon {
+  width: 40px;
+
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 11px;
+
+  color: #6c4ba2;
+
+  background: #f0e8fa;
+}
+
+
+.system-status-item span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #8d8497;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+.system-status-item strong {
+  color: #4b2e83;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+.admin-dark .activity-date {
+  color: #aaa0b1;
+}
+
+
+.admin-dark .activity-bar-container {
+  background: #2b2135;
+}
+
+
+.admin-dark .activity-count {
+  color: #d5b8ed;
+}
+
+
+.admin-dark .knowledge-item {
+  border-color: #3b3045;
+
+  background:
+    linear-gradient(
+      135deg,
+      #211a29,
+      #241b26
+    );
+}
+
+
+.admin-dark .knowledge-item svg {
+  color: #b494d5;
+}
+
+
+.admin-dark .knowledge-item span {
+  color: #9d91a5;
+}
+
+
+.admin-dark .knowledge-item strong {
+  color: #d5b8ed;
+}
+
+
+.admin-dark .system-status-item {
+  border-color: #3b3045;
+
+  background: #211a29;
+}
+
+
+.admin-dark .system-status-icon {
+  color: #b494d5;
+
+  background: #30243b;
+}
+
+
+.admin-dark .system-status-item span {
+  color: #9d91a5;
+}
+
+
+.admin-dark .system-status-item strong {
+  color: #d5b8ed;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .admin-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .system-status-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 750px) {
+
+  .admin-dashboard-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .knowledge-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .system-status-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .activity-row {
+    grid-template-columns:
+      90px
+      minmax(0, 1fr)
+      32px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .admin-stats {
+    grid-template-columns:
+      1fr;
+  }
+
+  .activity-row {
+    grid-template-columns:
+      82px
+      minmax(0, 1fr)
+      30px;
+
+    gap: 8px;
+  }
+
+  .activity-date {
+    font-size: 10px;
+  }
+
+}
+
+/* =========================================================
+   AMANAI FINAL UI SYSTEM
+   Unified font, alignment, spacing and RTL/LTR behavior
+   ========================================================= */
+
+:root {
+  --amanai-font: "Tajawal", "Segoe UI", Arial, sans-serif;
+
+  --amanai-plum: #4b2e83;
+  --amanai-purple: #7b61c8;
+  --amanai-lavender: #dcc6f2;
+  --amanai-blush: #f8c6d9;
+  --amanai-rose: #e79bb7;
+
+  --amanai-bg: #fff9fb;
+  --amanai-surface: #ffffff;
+  --amanai-text: #28213a;
+  --amanai-muted: #766f82;
+  --amanai-border: #eee5f1;
+
+  --amanai-radius-sm: 10px;
+  --amanai-radius-md: 13px;
+  --amanai-radius-lg: 18px;
+  --amanai-radius-xl: 24px;
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select,
+option {
+  font-family: var(--amanai-font);
+}
+
+html {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  color: var(--amanai-text);
+  background: var(--amanai-bg);
+}
+
+/* Keep every page aligned with the active language. */
+html[dir="ltr"],
+html[dir="ltr"] body {
+  direction: ltr;
+}
+
+html[dir="rtl"],
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+/* Comfortable default text alignment. */
+body {
+  text-align: start;
+}
+
+/* Headings: one consistent family everywhere. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--amanai-font) !important;
+}
+
+/* Remove the remaining decorative serif font from auth/home headings. */
+.login-visual h1,
+.form-heading h1,
+.signup-visual-content h1,
+.hero h1 {
+  font-family: var(--amanai-font) !important;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+/* Inputs and buttons should always use the same typeface. */
+button,
+input,
+textarea,
+select {
+  font-family: var(--amanai-font) !important;
+}
+
+/* Arabic pages: comfortable reading direction and line-height. */
+html[dir="rtl"] .login-page,
+html[dir="rtl"] .signup-page,
+html[dir="rtl"] .aman-app,
+html[dir="rtl"] .admin-page,
+html[dir="rtl"] .upload-page,
+html[dir="rtl"] .chat-page {
+  direction: rtl;
+}
+
+/* Auth forms */
+html[dir="rtl"] .login-form-wrapper,
+html[dir="rtl"] .signup-form-wrapper {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-group label,
+html[dir="rtl"] .password-label,
+html[dir="rtl"] .remember-row,
+html[dir="rtl"] .security-note,
+html[dir="rtl"] .form-heading,
+html[dir="rtl"] .signup-prompt {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-group input {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-with-icon input {
+  text-align: right;
+}
+
+/* Home */
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .hero-description,
+html[dir="rtl"] .feature-card,
+html[dir="rtl"] .trust-row {
+  text-align: right;
+}
+
+/* Admin */
+html[dir="rtl"] .admin-container,
+html[dir="rtl"] .management-header,
+html[dir="rtl"] .admin-upload-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .admin-heading {
+  direction: rtl;
+}
+
+/* Upload */
+html[dir="rtl"] .upload-card,
+html[dir="rtl"] .upload-heading,
+html[dir="rtl"] .upload-message {
+  text-align: right;
+}
+
+html[dir="rtl"] .file-drop-zone {
+  direction: rtl;
+}
+
+/* Chat */
+html[dir="rtl"] .chat-page,
+html[dir="rtl"] .chat-container,
+html[dir="rtl"] .sidebar-header,
+html[dir="rtl"] .sidebar-footer {
+  direction: rtl;
+}
+
+html[dir="rtl"] .message-bubble,
+html[dir="rtl"] .conversation-title,
+html[dir="rtl"] .source-title,
+html[dir="rtl"] .source-name {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: plaintext;
+}
+
+/* Do not reverse the visual direction of the shared navbar. */
+html[dir="rtl"] .main-navbar {
+  direction: rtl;
+}
+
+html[dir="rtl"] .main-navbar-brand,
+html[dir="rtl"] .main-navbar-actions {
+  direction: ltr;
+}
+
+/* Consistent focus state. */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(123, 97, 200, 0.22);
+  outline-offset: 2px;
+}
+
+/* Better mobile typography and spacing. */
+@media (max-width: 700px) {
+  .login-visual h1,
+  .signup-visual-content h1,
+  .hero h1 {
+    letter-spacing: -0.015em;
+  }
+
+  .login-visual-content > p,
+  .signup-visual-content > p,
+  .hero-description {
+    line-height: 1.75;
+  }
+}
+
+/* Manual dark mode should win over OS color preference. */
+html.dark-mode,
+html.dark-mode body {
+  color-scheme: dark;
+}
+
+html.dark-mode input,
+html.dark-mode textarea,
+html.dark-mode select {
+  color-scheme: dark;
+}

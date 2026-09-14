@@ -1,0 +1,1184 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap");
+.signup-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: var(--cream);
+}
+
+
+/* ========================================
+   LEFT VISUAL
+======================================== */
+
+.signup-visual {
+  position: relative;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  padding: 38px 7%;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(220, 198, 242, 0.75),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(248, 198, 217, 0.5),
+      transparent 30%
+    ),
+    #fbf7fc;
+}
+
+
+/* Brand */
+
+.signup-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  position: relative;
+  z-index: 3;
+}
+
+
+.signup-brand-icon {
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+
+  color: var(--plum);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--lavender),
+      var(--blush)
+    );
+}
+
+
+.signup-brand h2 {
+  margin: 0;
+
+  color: var(--plum);
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+
+.signup-brand span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--muted);
+
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+/* Visual Content */
+
+.signup-visual-content {
+  position: relative;
+  z-index: 3;
+
+  max-width: 600px;
+
+  margin: 110px auto 0;
+}
+
+
+.mini-badge {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 13px;
+
+  border-radius: 100px;
+
+  color: var(--plum);
+
+  background: rgba(220, 198, 242, 0.42);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+.mini-badge span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--rose);
+
+  box-shadow:
+    0 0 0 5px
+    rgba(231, 155, 183, 0.15);
+}
+
+
+.signup-visual-content h1 {
+  margin: 22px 0 18px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 5vw, 70px);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  color: var(--plum);
+}
+
+
+.signup-visual-content h1 span {
+  background:
+    linear-gradient(
+      90deg,
+      var(--purple),
+      var(--rose)
+    );
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+.signup-visual-content > p {
+  max-width: 470px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   ROBOT
+======================================== */
+
+.signup-robot {
+  position: relative;
+
+  width: 280px;
+
+  margin: 45px auto 0;
+
+  text-align: center;
+}
+
+
+.signup-robot-glow {
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  left: 50%;
+  top: 20px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(220, 198, 242, 0.75),
+      rgba(248, 198, 217, 0.2),
+      transparent 70%
+    );
+}
+
+
+.signup-robot-head {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.signup-robot-face {
+  width: 185px;
+  height: 155px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 5px solid white;
+
+  border-radius:
+    48% 48% 43% 43%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #eee8f8
+    );
+
+  box-shadow:
+    0 20px 45px
+    rgba(75, 46, 131, 0.17);
+}
+
+
+.signup-robot-eyes {
+  display: flex;
+
+  gap: 48px;
+}
+
+
+.signup-robot-eyes span {
+  width: 20px;
+  height: 27px;
+
+  border-radius: 50%;
+
+  background: var(--plum);
+
+  box-shadow:
+    0 0 0 5px
+    rgba(123, 97, 200, 0.1);
+}
+
+
+.signup-robot-smile {
+  width: 30px;
+  height: 14px;
+
+  margin-top: 14px;
+
+  border-bottom:
+    3px solid var(--rose);
+
+  border-radius:
+    0 0 30px 30px;
+}
+
+
+.signup-robot-neck {
+  position: relative;
+  z-index: 2;
+
+  width: 42px;
+  height: 28px;
+
+  margin: -3px auto 0;
+
+  background: #e5dff0;
+
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+}
+
+
+.signup-robot-body {
+  position: relative;
+  z-index: 2;
+
+  width: 215px;
+  height: 170px;
+
+  margin: auto;
+
+  border-radius:
+    90px 90px 35px 35px;
+
+  background:
+    linear-gradient(
+      150deg,
+      #ffffff,
+      #f5f1f9
+    );
+
+  box-shadow:
+    0 25px 45px
+    rgba(75, 46, 131, 0.13);
+}
+
+
+.signup-coat {
+  position: relative;
+
+  height: 100%;
+}
+
+
+/* Stethoscope */
+
+.signup-stethoscope {
+  position: absolute;
+
+  left: 50%;
+  top: 23px;
+
+  width: 55px;
+  height: 82px;
+
+  transform: translateX(-50%);
+
+  border:
+    4px solid var(--purple);
+
+  border-top: none;
+
+  border-radius:
+    0 0 35px 35px;
+}
+
+
+.signup-heart {
+  position: absolute;
+
+  top: 55px;
+  right: 35px;
+
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--rose);
+
+  background: var(--cream);
+}
+
+
+.signup-heart-float {
+  position: absolute;
+
+  z-index: 4;
+
+  right: -5px;
+  top: 120px;
+
+  width: 60px;
+  height: 60px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--rose);
+
+  background: white;
+
+  box-shadow:
+    0 15px 35px
+    rgba(75, 46, 131, 0.14);
+}
+
+
+/* ECG */
+
+.signup-ecg {
+  position: absolute;
+
+  width: 100%;
+
+  left: 0;
+
+  bottom: 45px;
+
+  opacity: 0.6;
+
+  z-index: 1;
+}
+
+
+.signup-ecg svg {
+  width: 100%;
+  height: 100px;
+}
+
+
+.signup-ecg path {
+  fill: none;
+
+  stroke: var(--rose);
+
+  stroke-width: 3;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+/* ========================================
+   FORM SIDE
+======================================== */
+
+.signup-form-section {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 50px 8%;
+
+  background: white;
+}
+
+
+.signup-form-wrapper {
+  width: min(440px, 100%);
+}
+
+
+/* Back button */
+
+.back-home {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 50px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+
+.back-home:hover {
+  color: var(--plum);
+}
+
+
+/* Heading */
+
+.form-heading {
+  margin-bottom: 32px;
+}
+
+
+.form-heading h1 {
+  margin: 0 0 8px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 44px;
+
+  color: var(--plum);
+
+  letter-spacing: -0.03em;
+}
+
+
+.form-heading p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+.mobile-logo {
+  display: none;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.signup-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 19px;
+}
+
+
+.input-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.input-group label {
+  color: var(--text);
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+.input-with-icon {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+.input-with-icon svg {
+  position: absolute;
+
+  left: 15px;
+
+  color: var(--muted);
+
+  pointer-events: none;
+}
+
+
+.input-with-icon input {
+  width: 100%;
+
+  height: 50px;
+
+  padding: 0 15px 0 43px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  outline: none;
+
+  color: var(--text);
+
+  background: #fff;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.input-with-icon input::placeholder {
+  color: #aaa3b0;
+}
+
+
+.input-with-icon input:focus {
+  border-color: var(--purple);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(123, 97, 200, 0.1);
+}
+
+
+/* Error */
+
+.signup-error {
+  margin: -4px 0 0;
+
+  color: #c85b72;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* Submit */
+
+.signup-submit {
+  width: 100%;
+
+  height: 50px;
+
+  margin-top: 4px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--plum),
+      var(--purple)
+    );
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 25px
+    rgba(75, 46, 131, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.signup-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 30px
+    rgba(75, 46, 131, 0.24);
+}
+
+
+.signup-submit:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+   SECURITY
+======================================== */
+
+.security-note {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 28px;
+
+  padding: 14px;
+
+  border-radius: 13px;
+
+  background: #fbf8fd;
+
+  color: var(--purple);
+}
+
+
+.security-note > svg {
+  flex-shrink: 0;
+
+  margin-top: 1px;
+}
+
+
+.security-note strong {
+  display: block;
+
+  color: var(--plum);
+
+  font-size: 11px;
+}
+
+
+.security-note p {
+  margin: 4px 0 0;
+
+  color: var(--muted);
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   LOGIN PROMPT
+======================================== */
+
+.signup-prompt {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 25px;
+
+  font-size: 12px;
+}
+
+
+.signup-prompt span {
+  color: var(--muted);
+}
+
+
+.signup-prompt button {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--plum);
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.signup-prompt button:hover {
+  text-decoration: underline;
+}
+
+
+/* Footer */
+
+.login-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 32px;
+
+  color: #aaa3b0;
+
+  font-size: 10px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+  .signup-page {
+    grid-template-columns: 1fr;
+  }
+
+
+  .signup-visual {
+    min-height: 500px;
+
+    padding: 30px 7%;
+  }
+
+
+  .signup-visual-content {
+    margin-top: 70px;
+
+    text-align: center;
+  }
+
+
+  .mini-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .signup-visual-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .signup-robot {
+    margin-top: 35px;
+
+    transform: scale(0.8);
+  }
+
+
+  .signup-form-section {
+    min-height: auto;
+
+    padding: 60px 7%;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .signup-visual {
+    min-height: 430px;
+
+    padding: 25px 5%;
+  }
+
+
+  .signup-brand h2 {
+    font-size: 19px;
+  }
+
+
+  .signup-brand span {
+    font-size: 8px;
+  }
+
+
+  .signup-brand-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+
+  .signup-visual-content {
+    margin-top: 55px;
+  }
+
+
+  .signup-visual-content h1 {
+    font-size: 42px;
+  }
+
+
+  .signup-visual-content > p {
+    font-size: 13px;
+  }
+
+
+  .signup-robot {
+    transform: scale(0.65);
+
+    margin-top: 5px;
+  }
+
+
+  .signup-ecg {
+    bottom: 20px;
+  }
+
+
+  .signup-form-section {
+    padding: 45px 6%;
+  }
+
+
+  .back-home {
+    margin-bottom: 35px;
+  }
+
+
+  .form-heading h1 {
+    font-size: 38px;
+  }
+
+
+  .signup-form {
+    gap: 17px;
+  }
+
+}
+
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+.signup-submit:focus-visible,
+.signup-prompt button:focus-visible,
+.back-home:focus-visible {
+  outline:
+    3px solid
+    rgba(123, 97, 200, 0.35);
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   AMANAI FINAL UI SYSTEM
+   Unified font, alignment, spacing and RTL/LTR behavior
+   ========================================================= */
+
+:root {
+  --amanai-font: "Tajawal", "Segoe UI", Arial, sans-serif;
+
+  --amanai-plum: #4b2e83;
+  --amanai-purple: #7b61c8;
+  --amanai-lavender: #dcc6f2;
+  --amanai-blush: #f8c6d9;
+  --amanai-rose: #e79bb7;
+
+  --amanai-bg: #fff9fb;
+  --amanai-surface: #ffffff;
+  --amanai-text: #28213a;
+  --amanai-muted: #766f82;
+  --amanai-border: #eee5f1;
+
+  --amanai-radius-sm: 10px;
+  --amanai-radius-md: 13px;
+  --amanai-radius-lg: 18px;
+  --amanai-radius-xl: 24px;
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select,
+option {
+  font-family: var(--amanai-font);
+}
+
+html {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  color: var(--amanai-text);
+  background: var(--amanai-bg);
+}
+
+/* Keep every page aligned with the active language. */
+html[dir="ltr"],
+html[dir="ltr"] body {
+  direction: ltr;
+}
+
+html[dir="rtl"],
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+/* Comfortable default text alignment. */
+body {
+  text-align: start;
+}
+
+/* Headings: one consistent family everywhere. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--amanai-font) !important;
+}
+
+/* Remove the remaining decorative serif font from auth/home headings. */
+.login-visual h1,
+.form-heading h1,
+.signup-visual-content h1,
+.hero h1 {
+  font-family: var(--amanai-font) !important;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+/* Inputs and buttons should always use the same typeface. */
+button,
+input,
+textarea,
+select {
+  font-family: var(--amanai-font) !important;
+}
+
+/* Arabic pages: comfortable reading direction and line-height. */
+html[dir="rtl"] .login-page,
+html[dir="rtl"] .signup-page,
+html[dir="rtl"] .aman-app,
+html[dir="rtl"] .admin-page,
+html[dir="rtl"] .upload-page,
+html[dir="rtl"] .chat-page {
+  direction: rtl;
+}
+
+/* Auth forms */
+html[dir="rtl"] .login-form-wrapper,
+html[dir="rtl"] .signup-form-wrapper {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-group label,
+html[dir="rtl"] .password-label,
+html[dir="rtl"] .remember-row,
+html[dir="rtl"] .security-note,
+html[dir="rtl"] .form-heading,
+html[dir="rtl"] .signup-prompt {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-group input {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-with-icon input {
+  text-align: right;
+}
+
+/* Home */
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .hero-description,
+html[dir="rtl"] .feature-card,
+html[dir="rtl"] .trust-row {
+  text-align: right;
+}
+
+/* Admin */
+html[dir="rtl"] .admin-container,
+html[dir="rtl"] .management-header,
+html[dir="rtl"] .admin-upload-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .admin-heading {
+  direction: rtl;
+}
+
+/* Upload */
+html[dir="rtl"] .upload-card,
+html[dir="rtl"] .upload-heading,
+html[dir="rtl"] .upload-message {
+  text-align: right;
+}
+
+html[dir="rtl"] .file-drop-zone {
+  direction: rtl;
+}
+
+/* Chat */
+html[dir="rtl"] .chat-page,
+html[dir="rtl"] .chat-container,
+html[dir="rtl"] .sidebar-header,
+html[dir="rtl"] .sidebar-footer {
+  direction: rtl;
+}
+
+html[dir="rtl"] .message-bubble,
+html[dir="rtl"] .conversation-title,
+html[dir="rtl"] .source-title,
+html[dir="rtl"] .source-name {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: plaintext;
+}
+
+/* Do not reverse the visual direction of the shared navbar. */
+html[dir="rtl"] .main-navbar {
+  direction: rtl;
+}
+
+html[dir="rtl"] .main-navbar-brand,
+html[dir="rtl"] .main-navbar-actions {
+  direction: ltr;
+}
+
+/* Consistent focus state. */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(123, 97, 200, 0.22);
+  outline-offset: 2px;
+}
+
+/* Better mobile typography and spacing. */
+@media (max-width: 700px) {
+  .login-visual h1,
+  .signup-visual-content h1,
+  .hero h1 {
+    letter-spacing: -0.015em;
+  }
+
+  .login-visual-content > p,
+  .signup-visual-content > p,
+  .hero-description {
+    line-height: 1.75;
+  }
+}
+
+/* Manual dark mode should win over OS color preference. */
+html.dark-mode,
+html.dark-mode body {
+  color-scheme: dark;
+}
+
+html.dark-mode input,
+html.dark-mode textarea,
+html.dark-mode select {
+  color-scheme: dark;
+}

@@ -1,0 +1,1240 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap");
+/* ========================================
+   AMANAI LOGIN PAGE
+======================================== */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+
+  background: #fff9fb;
+}
+
+
+/* ========================================
+   LEFT VISUAL SECTION
+======================================== */
+
+.login-visual {
+  position: relative;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  padding: 42px 7%;
+
+  background:
+    radial-gradient(
+      circle at 70% 40%,
+      rgba(220, 198, 242, 0.72),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(248, 198, 217, 0.5),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #fff9fb,
+      #f6effa
+    );
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ========================================
+   BRAND
+======================================== */
+
+.login-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  position: relative;
+  z-index: 5;
+}
+
+.login-brand-icon {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 14px;
+
+  display: grid;
+  place-items: center;
+
+  color: #4b2e83;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dcc6f2,
+      #f8c6d9
+    );
+}
+
+.login-brand h2 {
+  margin: 0;
+
+  color: #4b2e83;
+
+  font-size: 21px;
+}
+
+.login-brand span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #766f82;
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   VISUAL CONTENT
+======================================== */
+
+.login-visual-content {
+  position: relative;
+  z-index: 3;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding-bottom: 30px;
+}
+
+.mini-badge {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 13px;
+
+  border-radius: 50px;
+
+  color: #4b2e83;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  border: 1px solid rgba(238, 229, 241, 0.9);
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.mini-badge span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #e79bb7;
+
+  box-shadow:
+    0 0 0 5px
+    rgba(231, 155, 183, 0.13);
+}
+
+.login-visual h1 {
+  margin: 20px 0 13px;
+
+  max-width: 500px;
+
+  color: #4b2e83;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(44px, 5vw, 70px);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+.login-visual h1 span {
+  background:
+    linear-gradient(
+      90deg,
+      #7b61c8,
+      #e79bb7
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.login-visual-content > p {
+  max-width: 470px;
+
+  margin: 0;
+
+  color: #766f82;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   ROBOT
+======================================== */
+
+.login-robot {
+  position: relative;
+
+  width: 280px;
+
+  height: 285px;
+
+  margin:
+    35px auto 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+}
+
+.robot-glow {
+  position: absolute;
+
+  width: 300px;
+
+  height: 300px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(220, 198, 242, 0.8),
+      rgba(248, 198, 217, 0.25),
+      transparent 70%
+    );
+
+  z-index: 0;
+}
+
+
+/* Robot Head */
+
+.login-robot-head {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.login-robot-face {
+  width: 170px;
+
+  height: 145px;
+
+  border-radius:
+    48% 48% 43% 43%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #eee8f8
+    );
+
+  border: 5px solid white;
+
+  box-shadow:
+    0 20px 40px
+    rgba(75, 46, 131, 0.15);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.login-robot-eyes {
+  display: flex;
+
+  gap: 43px;
+}
+
+.login-robot-eyes span {
+  width: 18px;
+
+  height: 25px;
+
+  border-radius: 50%;
+
+  background: #4b2e83;
+
+  box-shadow:
+    0 0 0 5px
+    rgba(123, 97, 200, 0.1);
+}
+
+.login-robot-smile {
+  width: 28px;
+
+  height: 13px;
+
+  margin-top: 13px;
+
+  border-bottom:
+    3px solid #e79bb7;
+
+  border-radius:
+    0 0 30px 30px;
+}
+
+
+/* Neck */
+
+.login-robot-neck {
+  position: relative;
+
+  z-index: 1;
+
+  width: 40px;
+
+  height: 24px;
+
+  margin-top: -3px;
+
+  background: #e5dff0;
+
+  border-left: 4px solid white;
+
+  border-right: 4px solid white;
+}
+
+
+/* Body */
+
+.login-robot-body {
+  position: relative;
+
+  z-index: 2;
+
+  width: 205px;
+
+  height: 155px;
+
+  background:
+    linear-gradient(
+      150deg,
+      #ffffff,
+      #f4eff8
+    );
+
+  border-radius:
+    85px 85px 30px 30px;
+
+  box-shadow:
+    0 20px 40px
+    rgba(75, 46, 131, 0.12);
+}
+
+.login-coat {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Coat Collar */
+
+.login-coat::before,
+.login-coat::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  width: 55px;
+
+  height: 65px;
+
+  background: #fff;
+
+  z-index: 2;
+}
+
+.login-coat::before {
+  left: 43px;
+
+  transform: skew(-15deg);
+}
+
+.login-coat::after {
+  right: 43px;
+
+  transform: skew(15deg);
+}
+
+
+/* Stethoscope */
+
+.login-stethoscope {
+  position: absolute;
+
+  left: 50%;
+
+  top: 20px;
+
+  width: 55px;
+
+  height: 80px;
+
+  transform:
+    translateX(-50%);
+
+  border:
+    4px solid #7b61c8;
+
+  border-top: none;
+
+  border-radius:
+    0 0 35px 35px;
+
+  z-index: 3;
+}
+
+.login-stethoscope::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -14px;
+
+  transform:
+    translateX(-50%);
+
+  width: 27px;
+
+  height: 27px;
+
+  border-radius: 50%;
+
+  background: #7b61c8;
+
+  border: 3px solid white;
+}
+
+
+/* Heart badge */
+
+.login-heart {
+  position: absolute;
+
+  right: 38px;
+
+  top: 70px;
+
+  width: 34px;
+
+  height: 34px;
+
+  border-radius: 50%;
+
+  display: grid;
+
+  place-items: center;
+
+  color: #e79bb7;
+
+  background: #fff9fb;
+
+  z-index: 4;
+}
+
+
+/* Floating Heart */
+
+.login-heart-float {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 10px;
+
+  top: 125px;
+
+  width: 58px;
+
+  height: 58px;
+
+  border-radius: 50%;
+
+  display: grid;
+
+  place-items: center;
+
+  color: #e79bb7;
+
+  background: white;
+
+  box-shadow:
+    0 15px 30px
+    rgba(75, 46, 131, 0.12);
+}
+
+
+/* ========================================
+   ECG
+======================================== */
+
+.login-ecg {
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 45px;
+
+  width: 100%;
+
+  opacity: 0.48;
+
+  z-index: 1;
+}
+
+.login-ecg svg {
+  width: 100%;
+
+  height: 100px;
+}
+
+.login-ecg path {
+  fill: none;
+
+  stroke: #e79bb7;
+
+  stroke-width: 3;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+/* ========================================
+   RIGHT FORM SECTION
+======================================== */
+
+.login-form-section {
+  min-height: 100vh;
+
+  padding: 40px 8%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #ffffff;
+}
+
+.login-form-wrapper {
+  width: 100%;
+
+  max-width: 430px;
+}
+
+
+/* Back */
+
+.back-home {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 55px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #766f82;
+
+  font-size: 12px;
+}
+
+.back-home:hover {
+  color: #4b2e83;
+}
+
+
+/* Heading */
+
+.form-heading {
+  margin-bottom: 30px;
+}
+
+.form-heading h1 {
+  margin: 0;
+
+  color: #28213a;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 43px;
+
+  letter-spacing: -0.03em;
+}
+
+.form-heading p {
+  margin: 8px 0 0;
+
+  color: #766f82;
+
+  font-size: 13px;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.login-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.input-group label {
+  color: #3d354b;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+
+  height: 49px;
+
+  padding: 0 14px;
+
+  border:
+    1px solid #e8dfeb;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #fff;
+
+  color: #28213a;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.input-group input::placeholder {
+  color: #b2aab9;
+}
+
+.input-group input:focus {
+  border-color: #9b83ce;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(123, 97, 200, 0.09);
+}
+
+
+/* Password */
+
+.password-label {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.forgot-password {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #7b61c8;
+
+  font-size: 11px;
+}
+
+.forgot-password:hover {
+  color: #4b2e83;
+}
+
+
+/* Remember */
+
+.remember-row {
+  margin-top: -3px;
+}
+
+.remember-row label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #766f82;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.remember-row input {
+  accent-color: #7b61c8;
+}
+
+
+/* Submit */
+
+.login-submit {
+  width: 100%;
+
+  height: 51px;
+
+  margin-top: 3px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4b2e83,
+      #7b61c8
+    );
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 12px 25px
+    rgba(75, 46, 131, 0.17);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-submit:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 30px
+    rgba(75, 46, 131, 0.22);
+}
+
+
+/* ========================================
+   SECURITY
+======================================== */
+
+.security-note {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-top: 28px;
+
+  padding: 13px;
+
+  border-radius: 13px;
+
+  background: #faf7fc;
+
+  border:
+    1px solid #eee6f2;
+
+  color: #7b61c8;
+}
+
+.security-note strong {
+  display: block;
+
+  color: #4b2e83;
+
+  font-size: 11px;
+}
+
+.security-note p {
+  margin: 3px 0 0;
+
+  color: #8a8292;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   SIGNUP PROMPT
+======================================== */
+
+.signup-prompt {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 30px;
+
+  color: #766f82;
+
+  font-size: 11px;
+}
+
+.signup-prompt button {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #7b61c8;
+
+  font-weight: 700;
+}
+
+.signup-prompt button:hover {
+  color: #4b2e83;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.login-footer {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 38px;
+
+  color: #aaa1af;
+
+  font-size: 9px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-visual {
+    min-height: 500px;
+
+    padding:
+      30px 6%;
+  }
+
+  .login-visual-content {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .login-visual h1 {
+    font-size: 50px;
+  }
+
+  .login-visual-content > p {
+    margin:
+      0 auto;
+  }
+
+  .login-robot {
+    margin-top: 25px;
+
+    transform:
+      scale(0.8);
+  }
+
+  .login-ecg {
+    bottom: 10px;
+  }
+
+  .login-form-section {
+    min-height: auto;
+
+    padding:
+      60px 7%;
+  }
+
+  .back-home {
+    margin-bottom: 35px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 550px) {
+
+  .login-visual {
+    min-height: 440px;
+
+    padding:
+      25px 5%;
+  }
+
+  .login-brand h2 {
+    font-size: 19px;
+  }
+
+  .login-brand span {
+    font-size: 8px;
+  }
+
+  .login-visual h1 {
+    font-size: 42px;
+  }
+
+  .login-visual-content > p {
+    font-size: 12px;
+  }
+
+  .login-robot {
+    transform:
+      scale(0.68);
+
+    margin-top: 10px;
+  }
+
+  .login-ecg {
+    bottom: 0;
+  }
+
+  .login-form-section {
+    padding:
+      45px 7%;
+  }
+
+  .form-heading h1 {
+    font-size: 38px;
+  }
+
+  .signup-prompt {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+  }
+}
+
+/* =========================================================
+   AMANAI FINAL UI SYSTEM
+   Unified font, alignment, spacing and RTL/LTR behavior
+   ========================================================= */
+
+:root {
+  --amanai-font: "Tajawal", "Segoe UI", Arial, sans-serif;
+
+  --amanai-plum: #4b2e83;
+  --amanai-purple: #7b61c8;
+  --amanai-lavender: #dcc6f2;
+  --amanai-blush: #f8c6d9;
+  --amanai-rose: #e79bb7;
+
+  --amanai-bg: #fff9fb;
+  --amanai-surface: #ffffff;
+  --amanai-text: #28213a;
+  --amanai-muted: #766f82;
+  --amanai-border: #eee5f1;
+
+  --amanai-radius-sm: 10px;
+  --amanai-radius-md: 13px;
+  --amanai-radius-lg: 18px;
+  --amanai-radius-xl: 24px;
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select,
+option {
+  font-family: var(--amanai-font);
+}
+
+html {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  color: var(--amanai-text);
+  background: var(--amanai-bg);
+}
+
+/* Keep every page aligned with the active language. */
+html[dir="ltr"],
+html[dir="ltr"] body {
+  direction: ltr;
+}
+
+html[dir="rtl"],
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+/* Comfortable default text alignment. */
+body {
+  text-align: start;
+}
+
+/* Headings: one consistent family everywhere. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--amanai-font) !important;
+}
+
+/* Remove the remaining decorative serif font from auth/home headings. */
+.login-visual h1,
+.form-heading h1,
+.signup-visual-content h1,
+.hero h1 {
+  font-family: var(--amanai-font) !important;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+/* Inputs and buttons should always use the same typeface. */
+button,
+input,
+textarea,
+select {
+  font-family: var(--amanai-font) !important;
+}
+
+/* Arabic pages: comfortable reading direction and line-height. */
+html[dir="rtl"] .login-page,
+html[dir="rtl"] .signup-page,
+html[dir="rtl"] .aman-app,
+html[dir="rtl"] .admin-page,
+html[dir="rtl"] .upload-page,
+html[dir="rtl"] .chat-page {
+  direction: rtl;
+}
+
+/* Auth forms */
+html[dir="rtl"] .login-form-wrapper,
+html[dir="rtl"] .signup-form-wrapper {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-group label,
+html[dir="rtl"] .password-label,
+html[dir="rtl"] .remember-row,
+html[dir="rtl"] .security-note,
+html[dir="rtl"] .form-heading,
+html[dir="rtl"] .signup-prompt {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-group input {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-with-icon input {
+  text-align: right;
+}
+
+/* Home */
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .hero-description,
+html[dir="rtl"] .feature-card,
+html[dir="rtl"] .trust-row {
+  text-align: right;
+}
+
+/* Admin */
+html[dir="rtl"] .admin-container,
+html[dir="rtl"] .management-header,
+html[dir="rtl"] .admin-upload-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .admin-heading {
+  direction: rtl;
+}
+
+/* Upload */
+html[dir="rtl"] .upload-card,
+html[dir="rtl"] .upload-heading,
+html[dir="rtl"] .upload-message {
+  text-align: right;
+}
+
+html[dir="rtl"] .file-drop-zone {
+  direction: rtl;
+}
+
+/* Chat */
+html[dir="rtl"] .chat-page,
+html[dir="rtl"] .chat-container,
+html[dir="rtl"] .sidebar-header,
+html[dir="rtl"] .sidebar-footer {
+  direction: rtl;
+}
+
+html[dir="rtl"] .message-bubble,
+html[dir="rtl"] .conversation-title,
+html[dir="rtl"] .source-title,
+html[dir="rtl"] .source-name {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: plaintext;
+}
+
+/* Do not reverse the visual direction of the shared navbar. */
+html[dir="rtl"] .main-navbar {
+  direction: rtl;
+}
+
+html[dir="rtl"] .main-navbar-brand,
+html[dir="rtl"] .main-navbar-actions {
+  direction: ltr;
+}
+
+/* Consistent focus state. */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(123, 97, 200, 0.22);
+  outline-offset: 2px;
+}
+
+/* Better mobile typography and spacing. */
+@media (max-width: 700px) {
+  .login-visual h1,
+  .signup-visual-content h1,
+  .hero h1 {
+    letter-spacing: -0.015em;
+  }
+
+  .login-visual-content > p,
+  .signup-visual-content > p,
+  .hero-description {
+    line-height: 1.75;
+  }
+}
+
+/* Manual dark mode should win over OS color preference. */
+html.dark-mode,
+html.dark-mode body {
+  color-scheme: dark;
+}
+
+html.dark-mode input,
+html.dark-mode textarea,
+html.dark-mode select {
+  color-scheme: dark;
+}

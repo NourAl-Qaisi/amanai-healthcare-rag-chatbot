@@ -1,0 +1,1028 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap");
+/* =========================================================
+   AMANAI - SHARED NAVBAR
+   Used across Home, Chat, Admin and other pages
+   ========================================================= */
+
+
+/* =========================================================
+   MAIN NAVBAR
+   ========================================================= */
+
+.main-navbar {
+  width: 100%;
+  min-height: 80px;
+  padding: 0 5%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  /* IMPORTANT:
+     Brand stays on the RIGHT
+     Actions stay on the LEFT
+  */
+  direction: rtl;
+
+  background: #ffffff;
+  border-bottom: 1px solid #eee7f4;
+
+  position: relative;
+  z-index: 1000;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.main-navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  /* Keep logo + text natural */
+  direction: ltr;
+
+  cursor: pointer;
+  user-select: none;
+
+  flex-shrink: 0;
+}
+
+
+/* Logo */
+
+.main-navbar-logo {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: linear-gradient(
+    135deg,
+    #8050bd,
+    #d58ab9
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 7px 18px rgba(113, 67, 160, 0.20);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.main-navbar-brand:hover .main-navbar-logo {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 24px rgba(113, 67, 160, 0.27);
+}
+
+
+/* Brand text */
+
+.main-navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  line-height: 1.15;
+}
+
+.main-navbar-brand-text h2 {
+  margin: 0;
+
+  color: #56318f;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.main-navbar-brand-text span {
+  margin-top: 5px;
+
+  color: #777181;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  letter-spacing: 0.1px;
+}
+
+
+/* =========================================================
+   NAVBAR ACTIONS
+   ========================================================= */
+
+.main-navbar-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  /* Buttons remain LTR internally */
+  direction: ltr;
+
+  /* Push actions to the LEFT */
+  margin-right: auto;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BASE BUTTON
+   ========================================================= */
+
+.main-navbar-actions button {
+  height: 58px;
+
+  border-radius: 16px;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CHAT BUTTON
+   ========================================================= */
+
+.navbar-chat-button {
+  min-width: 116px;
+
+  padding: 0 22px;
+
+  color: #60369b;
+
+  background: #ffffff;
+
+  border: 1.5px solid #7043aa;
+}
+
+.navbar-chat-button:hover {
+  background: #f8f1ff;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 14px rgba(112, 67, 170, 0.12);
+}
+
+
+/* Active page */
+
+.navbar-chat-button.navbar-active {
+  background: #f8f1ff;
+
+  border-color: #7043aa;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(112, 67, 170, 0.08);
+}
+
+
+/* =========================================================
+   ADMIN BUTTON
+   ========================================================= */
+
+.navbar-admin-button {
+  min-width: 116px;
+
+  padding: 0 20px;
+
+  gap: 7px;
+
+  color: #60369b;
+
+  background: #ffffff;
+
+  border: 1.5px solid #ded2eb;
+}
+
+.navbar-admin-button svg {
+  flex-shrink: 0;
+}
+
+.navbar-admin-button:hover {
+  background: #faf7fd;
+
+  border-color: #7043aa;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 14px rgba(112, 67, 170, 0.10);
+}
+
+
+/* Active admin page */
+
+.navbar-admin-button.navbar-active {
+  background: #f8f1ff;
+
+  border-color: #7043aa;
+}
+
+
+/* =========================================================
+   LANGUAGE BUTTON
+   ========================================================= */
+
+.navbar-language-button {
+  min-width: 92px;
+
+  padding: 0 17px;
+
+  gap: 7px;
+
+  color: #60369b;
+
+  background: #ffffff;
+
+  border: 1.5px solid #ded2eb;
+}
+
+.navbar-language-button:hover {
+  background: #faf7fd;
+
+  border-color: #7043aa;
+
+  transform: translateY(-1px);
+}
+
+.navbar-language-button svg {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   THEME BUTTON
+   ========================================================= */
+
+.navbar-theme-button {
+  width: 58px;
+  min-width: 58px;
+
+  padding: 0;
+
+  color: #60369b;
+
+  background: #ffffff;
+
+  border: 1.5px solid #ded2eb;
+}
+
+.navbar-theme-button:hover {
+  background: #faf7fd;
+
+  border-color: #7043aa;
+
+  transform: translateY(-1px);
+}
+
+.navbar-theme-button svg {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+   ========================================================= */
+
+.navbar-logout-button {
+  min-width: 138px;
+
+  padding: 0 20px;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #5d3294,
+    #6e3aa5
+  );
+
+  border: 1.5px solid #5d3294;
+
+  box-shadow:
+    0 6px 16px rgba(91, 49, 145, 0.20);
+}
+
+.navbar-logout-button:hover {
+  background: linear-gradient(
+    135deg,
+    #502983,
+    #613297
+  );
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 9px 20px rgba(91, 49, 145, 0.28);
+}
+
+.navbar-logout-button svg {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.navbar-login-button {
+  min-width: 110px;
+
+  padding: 0 20px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #5d3294,
+    #6e3aa5
+  );
+
+  border: 1.5px solid #5d3294;
+
+  box-shadow:
+    0 6px 16px rgba(91, 49, 145, 0.20);
+}
+
+.navbar-login-button:hover {
+  background: linear-gradient(
+    135deg,
+    #502983,
+    #613297
+  );
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 9px 20px rgba(91, 49, 145, 0.28);
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+.main-navbar.navbar-dark {
+  background: #17111e;
+
+  border-bottom-color: #30243a;
+
+  box-shadow:
+    0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Brand */
+
+.main-navbar.navbar-dark .main-navbar-brand-text h2 {
+  color: #d9b9f4;
+}
+
+.main-navbar.navbar-dark .main-navbar-brand-text span {
+  color: #aaa0b2;
+}
+
+
+/* Chat */
+
+.main-navbar.navbar-dark .navbar-chat-button {
+  color: #d8b8f4;
+
+  background: #211927;
+
+  border-color: #8051ad;
+}
+
+.main-navbar.navbar-dark .navbar-chat-button:hover,
+.main-navbar.navbar-dark .navbar-chat-button.navbar-active {
+  background: #2c1f35;
+
+  border-color: #9865c7;
+}
+
+
+/* Admin */
+
+.main-navbar.navbar-dark .navbar-admin-button {
+  color: #d8b8f4;
+
+  background: #211927;
+
+  border-color: #45364f;
+}
+
+.main-navbar.navbar-dark .navbar-admin-button:hover,
+.main-navbar.navbar-dark .navbar-admin-button.navbar-active {
+  background: #2c1f35;
+
+  border-color: #8051ad;
+}
+
+
+/* Language */
+
+.main-navbar.navbar-dark .navbar-language-button {
+  color: #d8b8f4;
+
+  background: #211927;
+
+  border-color: #45364f;
+}
+
+.main-navbar.navbar-dark .navbar-language-button:hover {
+  background: #2c1f35;
+
+  border-color: #8051ad;
+}
+
+
+/* Theme */
+
+.main-navbar.navbar-dark .navbar-theme-button {
+  color: #d8b8f4;
+
+  background: #211927;
+
+  border-color: #45364f;
+}
+
+.main-navbar.navbar-dark .navbar-theme-button:hover {
+  background: #2c1f35;
+
+  border-color: #8051ad;
+}
+
+
+/* Logout */
+
+.main-navbar.navbar-dark .navbar-logout-button {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #613797,
+    #7545a9
+  );
+
+  border-color: #7040a1;
+}
+
+.main-navbar.navbar-dark .navbar-logout-button:hover {
+  background: linear-gradient(
+    135deg,
+    #7041a8,
+    #8150b5
+  );
+}
+
+
+/* Login */
+
+.main-navbar.navbar-dark .navbar-login-button {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #613797,
+    #7545a9
+  );
+
+  border-color: #7040a1;
+}
+
+
+/* =========================================================
+   RTL LANGUAGE SUPPORT
+   IMPORTANT:
+   Physical layout DOES NOT change.
+   
+   Brand = RIGHT
+   Actions = LEFT
+   
+   Arabic text is handled inside individual elements.
+   ========================================================= */
+
+.main-navbar[dir="rtl"],
+html[dir="rtl"] .main-navbar {
+  direction: rtl;
+}
+
+html[dir="rtl"] .main-navbar-actions {
+  direction: ltr;
+}
+
+html[dir="rtl"] .main-navbar-brand {
+  direction: ltr;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .main-navbar {
+    padding: 0 3%;
+  }
+
+  .main-navbar-actions {
+    gap: 9px;
+  }
+
+  .main-navbar-actions button {
+    height: 52px;
+
+    font-size: 14px;
+
+    border-radius: 14px;
+  }
+
+  .navbar-chat-button,
+  .navbar-admin-button {
+    min-width: 100px;
+
+    padding: 0 16px;
+  }
+
+  .navbar-language-button {
+    min-width: 82px;
+
+    padding: 0 13px;
+  }
+
+  .navbar-logout-button,
+  .navbar-login-button {
+    min-width: 120px;
+
+    padding: 0 15px;
+  }
+
+  .main-navbar-brand-text h2 {
+    font-size: 23px;
+  }
+
+  .main-navbar-logo {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .main-navbar {
+    min-height: 72px;
+
+    padding: 10px 4%;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+  .main-navbar-brand {
+    gap: 9px;
+  }
+
+  .main-navbar-logo {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 12px;
+  }
+
+  .main-navbar-brand-text h2 {
+    font-size: 20px;
+  }
+
+  .main-navbar-brand-text span {
+    font-size: 11px;
+
+    margin-top: 3px;
+  }
+
+  .main-navbar-actions {
+    gap: 7px;
+  }
+
+  .main-navbar-actions button {
+    height: 44px;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+  }
+
+  .navbar-chat-button,
+  .navbar-admin-button {
+    min-width: auto;
+
+    padding: 0 12px;
+  }
+
+  .navbar-language-button {
+    min-width: 62px;
+
+    padding: 0 9px;
+  }
+
+  .navbar-theme-button {
+    width: 44px;
+    min-width: 44px;
+  }
+
+  .navbar-logout-button,
+  .navbar-login-button {
+    min-width: auto;
+
+    padding: 0 12px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .main-navbar {
+    min-height: 68px;
+
+    padding: 9px 3%;
+
+    gap: 8px;
+  }
+
+  .main-navbar-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .main-navbar-brand {
+    gap: 8px;
+  }
+
+  .main-navbar-brand-text h2 {
+    font-size: 18px;
+  }
+
+  .main-navbar-brand-text span {
+    display: none;
+  }
+
+  .main-navbar-actions {
+    gap: 5px;
+  }
+
+  .main-navbar-actions button {
+    height: 40px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+  }
+
+  .navbar-chat-button,
+  .navbar-admin-button {
+    min-width: 40px;
+
+    padding: 0 9px;
+  }
+
+  .navbar-language-button {
+    min-width: 48px;
+
+    padding: 0 7px;
+  }
+
+  .navbar-theme-button {
+    width: 40px;
+    min-width: 40px;
+  }
+
+  .navbar-logout-button,
+  .navbar-login-button {
+    min-width: 40px;
+
+    padding: 0 9px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .main-navbar {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .main-navbar-brand-text h2 {
+    font-size: 17px;
+  }
+
+  .main-navbar-actions {
+    gap: 4px;
+  }
+
+  .main-navbar-actions button {
+    font-size: 11px;
+  }
+
+  .navbar-chat-button,
+  .navbar-admin-button {
+    min-width: 36px;
+
+    padding: 0 7px;
+  }
+
+  .navbar-language-button {
+    min-width: 42px;
+
+    padding: 0 6px;
+  }
+
+  .navbar-theme-button {
+    width: 38px;
+    min-width: 38px;
+  }
+
+  .navbar-logout-button,
+  .navbar-login-button {
+    min-width: 38px;
+
+    padding: 0 7px;
+  }
+}
+
+/* =========================================================
+   AMANAI FINAL UI SYSTEM
+   Unified font, alignment, spacing and RTL/LTR behavior
+   ========================================================= */
+
+:root {
+  --amanai-font: "Tajawal", "Segoe UI", Arial, sans-serif;
+
+  --amanai-plum: #4b2e83;
+  --amanai-purple: #7b61c8;
+  --amanai-lavender: #dcc6f2;
+  --amanai-blush: #f8c6d9;
+  --amanai-rose: #e79bb7;
+
+  --amanai-bg: #fff9fb;
+  --amanai-surface: #ffffff;
+  --amanai-text: #28213a;
+  --amanai-muted: #766f82;
+  --amanai-border: #eee5f1;
+
+  --amanai-radius-sm: 10px;
+  --amanai-radius-md: 13px;
+  --amanai-radius-lg: 18px;
+  --amanai-radius-xl: 24px;
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select,
+option {
+  font-family: var(--amanai-font);
+}
+
+html {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  color: var(--amanai-text);
+  background: var(--amanai-bg);
+}
+
+/* Keep every page aligned with the active language. */
+html[dir="ltr"],
+html[dir="ltr"] body {
+  direction: ltr;
+}
+
+html[dir="rtl"],
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+/* Comfortable default text alignment. */
+body {
+  text-align: start;
+}
+
+/* Headings: one consistent family everywhere. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--amanai-font) !important;
+}
+
+/* Remove the remaining decorative serif font from auth/home headings. */
+.login-visual h1,
+.form-heading h1,
+.signup-visual-content h1,
+.hero h1 {
+  font-family: var(--amanai-font) !important;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+/* Inputs and buttons should always use the same typeface. */
+button,
+input,
+textarea,
+select {
+  font-family: var(--amanai-font) !important;
+}
+
+/* Arabic pages: comfortable reading direction and line-height. */
+html[dir="rtl"] .login-page,
+html[dir="rtl"] .signup-page,
+html[dir="rtl"] .aman-app,
+html[dir="rtl"] .admin-page,
+html[dir="rtl"] .upload-page,
+html[dir="rtl"] .chat-page {
+  direction: rtl;
+}
+
+/* Auth forms */
+html[dir="rtl"] .login-form-wrapper,
+html[dir="rtl"] .signup-form-wrapper {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-group label,
+html[dir="rtl"] .password-label,
+html[dir="rtl"] .remember-row,
+html[dir="rtl"] .security-note,
+html[dir="rtl"] .form-heading,
+html[dir="rtl"] .signup-prompt {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-group input {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-with-icon input {
+  text-align: right;
+}
+
+/* Home */
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .hero-description,
+html[dir="rtl"] .feature-card,
+html[dir="rtl"] .trust-row {
+  text-align: right;
+}
+
+/* Admin */
+html[dir="rtl"] .admin-container,
+html[dir="rtl"] .management-header,
+html[dir="rtl"] .admin-upload-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .admin-heading {
+  direction: rtl;
+}
+
+/* Upload */
+html[dir="rtl"] .upload-card,
+html[dir="rtl"] .upload-heading,
+html[dir="rtl"] .upload-message {
+  text-align: right;
+}
+
+html[dir="rtl"] .file-drop-zone {
+  direction: rtl;
+}
+
+/* Chat */
+html[dir="rtl"] .chat-page,
+html[dir="rtl"] .chat-container,
+html[dir="rtl"] .sidebar-header,
+html[dir="rtl"] .sidebar-footer {
+  direction: rtl;
+}
+
+html[dir="rtl"] .message-bubble,
+html[dir="rtl"] .conversation-title,
+html[dir="rtl"] .source-title,
+html[dir="rtl"] .source-name {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: plaintext;
+}
+
+/* Do not reverse the visual direction of the shared navbar. */
+html[dir="rtl"] .main-navbar {
+  direction: rtl;
+}
+
+html[dir="rtl"] .main-navbar-brand,
+html[dir="rtl"] .main-navbar-actions {
+  direction: ltr;
+}
+
+/* Consistent focus state. */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(123, 97, 200, 0.22);
+  outline-offset: 2px;
+}
+
+/* Better mobile typography and spacing. */
+@media (max-width: 700px) {
+  .login-visual h1,
+  .signup-visual-content h1,
+  .hero h1 {
+    letter-spacing: -0.015em;
+  }
+
+  .login-visual-content > p,
+  .signup-visual-content > p,
+  .hero-description {
+    line-height: 1.75;
+  }
+}
+
+/* Manual dark mode should win over OS color preference. */
+html.dark-mode,
+html.dark-mode body {
+  color-scheme: dark;
+}
+
+html.dark-mode input,
+html.dark-mode textarea,
+html.dark-mode select {
+  color-scheme: dark;
+}
