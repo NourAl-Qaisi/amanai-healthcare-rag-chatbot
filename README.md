@@ -82,42 +82,43 @@ The backend determines the type of request.
 
 Supported intents include:
 
-Greeting
-Small Talk
-Gratitude
-Goodbye
-Identity
-Capabilities
-Clarification
-Healthcare
-Out-of-Domain
-Prompt Injection
-Emergency
+-Greeting
+-Small Talk
+-Gratitude
+-Goodbye
+-Identity
+-Capabilities
+-Clarification
+-Healthcare
+-Out-of-Domain
+-Prompt Injection
+-Emergency
+
 3. Embedding
 
 Healthcare questions are converted into multilingual embeddings using:
 
-paraphrase-multilingual-MiniLM-L12-v2
+-paraphrase-multilingual-MiniLM-L12-v2
 
 4. Retrieval
 
-FAISS performs semantic similarity search against the healthcare knowledge
+-FAISS performs semantic similarity search against the healthcare knowledge
 base and retrieves the most relevant documents.
 
 5. Context
 
-The retrieved documents are provided as healthcare context to the language
+-The retrieved documents are provided as healthcare context to the language
 model.
 
 6. Generation
 
-Google Gemini generates the final response based on the retrieved context.
+-Google Gemini generates the final response based on the retrieved context.
 
 🌍 Arabic & English Support
 
 AmanAI supports both Arabic and English.
 
-The system retrieves information using multilingual embeddings and generates
+-The system retrieves information using multilingual embeddings and generates
 the response in the same language as the user's question.
 
 Arabic Question → Arabic Response
@@ -128,58 +129,59 @@ English Question → English Response
 
 The application includes several security mechanisms.
 
-Authentication
-JWT authentication
-bcrypt password hashing
-SQLite database
-Token expiration
-Authorization
+-Authentication
+-JWT authentication
+-bcrypt password hashing
+-SQLite database
+-Token expiration
+-Authorization
 
 The application supports two roles:
 
-User
-Admin
+-User
+-Admin
 
-Administrative operations are protected by backend authorization.
+-Administrative operations are protected by backend authorization.
 
-Prompt Injection Protection
+-Prompt Injection Protection
 
-The chatbot detects prompt injection attempts and prevents users from
+-The chatbot detects prompt injection attempts and prevents users from
 overriding the application's instructions.
 
-Domain Restriction
+-Domain Restriction
 
-The chatbot is restricted to healthcare-related requests.
+-The chatbot is restricted to healthcare-related requests.
 
-Emergency Handling
+-Emergency Handling
 
-Potential emergency requests are handled separately with safety-oriented
-responses.
+-Potential emergency requests are handled separately with safety-oriented
+-responses.
 
 👤 User Features
 
 Authenticated users can:
 
-Create an account
-Sign in
-Ask healthcare questions
-Receive Arabic or English responses
-Continue conversations
-View conversation history
-Start a new conversation
-Delete conversations
-Log out
+-Create an account
+-Sign in
+-Ask healthcare questions
+-Receive Arabic or English responses
+-Continue conversations
+-View conversation history
+-Start a new conversation
+-Delete conversations
+-Log out
+
 👑 Admin Features
 
-Administrators can access the Admin Dashboard.
+-Administrators can access the Admin Dashboard.
 
-The dashboard allows administrators to:
+-The dashboard allows administrators to:
+-Upload healthcare datasets
+-Process uploaded data
+-Rebuild the FAISS vector store
+-Update the chatbot knowledge base
+-Dataset Processing
 
-Upload healthcare datasets
-Process uploaded data
-Rebuild the FAISS vector store
-Update the chatbot knowledge base
-Dataset Processing
 ```CSV Dataset
     ↓
 Data Processing
@@ -193,31 +195,33 @@ FAISS Index
 Updated Knowledge Base
 ```
 🛠️ Tech Stack
-Frontend
-React
-React Router
-Vite
-CSS
-Lucide React
-Backend
-Python
-FastAPI
-Uvicorn
-AI & RAG
-Google Gemini
-Sentence Transformers
-FAISS
-Retrieval-Augmented Generation
-Data
-Pandas
-CSV
-Pickle
-Database & Security
-SQLite
-bcrypt
-JWT
-python-jose
+-Frontend
+-React
+-React Router
+-Vite
+-CSS
+-Lucide React
+-Backend
+-Python
+-FastAPI
+-Uvicorn
+-AI & RAG
+-Google Gemini
+-Sentence Transformers
+-FAISS
+-Retrieval-Augmented Generation
+-Data
+-Pandas
+-CSV
+-Pickle
+-Database & Security
+-SQLite
+-bcrypt
+-JWT
+-python-jose
+
 📁 Project Structure
+
 ```amanai-healthcare-rag-chatbot/
 │
 ├── backend/
@@ -257,34 +261,34 @@ The application was tested across the main functional and security flows.
 
 Testing included:
 
-*User Sign Up
-*User Sign In
-*English healthcare RAG
-*Arabic healthcare RAG
-*Intent detection
-*Out-of-domain requests
-*Prompt injection attempts
-*Emergency requests
-*Conversation history
-*New conversations
-*Conversation deletion
-*Admin authentication
-*User access restrictions
-*Admin dataset upload
-*Backend authorization
-*Multi-tab authentication
-*RTL / LTR interface behavior
+-User Sign Up
+-User Sign In
+-English healthcare RAG
+-Arabic healthcare RAG
+-Intent detection
+-Out-of-domain requests
+-Prompt injection attempts
+-Emergency requests
+-Conversation history
+-New conversations
+-Conversation deletion
+-Admin authentication
+-User access restrictions
+-Admin dataset upload
+-Backend authorization
+-Multi-tab authentication
+-RTL / LTR interface behavior
 
 🚀 Future Improvements
 
-*Automated testing with Pytest
-*API testing
-*Improved source citations
-*More healthcare datasets
-*Retrieval evaluation
-*Conversation summarization
-*Cloud deployment
-*Monitoring and analytics
+-Automated testing with Pytest
+-API testing
+-Improved source citations
+-More healthcare datasets
+-Retrieval evaluation
+-Conversation summarization
+-Cloud deployment
+-Monitoring and analytics
 
 ⚠️ Medical Disclaimer
 
