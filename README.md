@@ -23,14 +23,6 @@ emergency-related requests.
 ---
 
 ---
-
-## 📸 Screenshots
-
-### 🏠 Home Page
-
-![AmanAI Home Page](screenshots/home.png)
----
-
 ## ✨ Features
 
 - User Sign Up and Sign In
